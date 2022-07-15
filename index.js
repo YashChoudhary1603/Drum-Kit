@@ -55,21 +55,6 @@ function makeSound(key) {
   }
 }
 
-function BellBoy(namee, agee, lag) {
-  this.name = namee;
-  this.age = agee;
-  this.laguage = lag;
-  this.cleann = function () {
-    alert("The cleaning is in the process");
-    this.age += 2;
-    console.log(this.age);
-  };
-}
-
-var Bellboy1 = new BellBoy("Yash", 18, ["hindi", "English"]);
-var Bellboy2 = new BellBoy("solu", 25, ["urdu", "french"]);
-
-var lin = [Bellboy1, Bellboy2];
 
 document.addEventListener("keypress", function (event) {
   console.log(event.key);
@@ -94,26 +79,24 @@ anotherEL("keypress", function callback(e) {
 });
 
 function buttonAnimation(ckey) {
-  var activeButton = $("." + ckey);
-  activeButton.addClass("pressed");
+  var activeButton = "." + ckey;
+  activeButton.classList.add("pressed");
 
   setTimeout(function () {
-    activeButton.removeClass("pressed");
+    activeButton.classList.remove("pressed");
   }, 100);
 }
 
 //for simple - activeButton.classList.add('pressed')
 //for Jquery -- activeButton.addClass("pressed");
-var h1 = document.getElementById("sir")
+var ho = document.getElementById("sir")
 
-h1.addEventListener("click", function () {
-
-  
-  if (document.getElementById("sir").style.color = "white") {
+ho.addEventListener("click", function () {
+  if (document.getElementById("sir").style.color === "white") {
     document.getElementById("sir").style.color ="green";
     console.log("Green ho gya");
   } else {
-    document.getElementById("sir").style.color= "white";
+    document.getElementById("sir").style.color = "white";
     console.log("White ho gya");
   }
 });
