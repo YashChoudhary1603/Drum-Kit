@@ -50,7 +50,7 @@ function makeSound(key) {
       break;
 
     default:
-      console.log(btnnn);
+      console.log(key);
       break;
   }
 }
