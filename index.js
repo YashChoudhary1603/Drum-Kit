@@ -5,8 +5,7 @@ for (var i = 0; i < count; i++) {
     //alert("Buttom is clicked");
 
     var btnnn = this.innerHTML;
-    var ele= document.getElementsByTagName("h2");
-    ele.text("You Pressed:" + " " + btnnn);
+    document.getElementById("h2").innerHTML = "You Pressed:" + " " + btnnn;
 
     makeSound(btnnn);
     buttonAnimation(btnnn);
@@ -105,17 +104,16 @@ function buttonAnimation(ckey) {
 
 //for simple - activeButton.classList.add('pressed')
 //for Jquery -- activeButton.addClass("pressed");
-$("h1").click(function () {
-  if ($("h1").css("color") == "rgb(255, 255, 255)") {
-    $("h1").css("color", "green");
+var h1 = document.getElementById("sir")
+
+h1.addEventListener("click", function () {
+
+  
+  if (document.getElementById("sir").style.color = "white") {
+    document.getElementById("sir").style.color ="green";
     console.log("Green ho gya");
   } else {
-    $("h1").css("color", "white");
+    document.getElementById("sir").style.color= "white";
     console.log("White ho gya");
   }
-});
-
-$(document).keypress(function (evet) {
-  console.log(evet.key);
-  $("h2").text("Your Are Pressed:" + " " + evet.key);
 });
