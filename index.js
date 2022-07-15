@@ -5,8 +5,8 @@ for (var i = 0; i < count; i++) {
     //alert("Buttom is clicked");
 
     var btnnn = this.innerHTML;
-
-    $("h2").text("You Pressed:" + " " + btnnn);
+    var ele= document.getElementsByTagName("h2");
+    ele.text("You Pressed:" + " " + btnnn);
 
     makeSound(btnnn);
     buttonAnimation(btnnn);
