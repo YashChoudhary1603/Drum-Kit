@@ -80,6 +80,7 @@ anotherEL("keypress", function callback(e) {
 
 function buttonAnimation(ckey) {
   var activeButton = "." + ckey;
+  console.log(activeButton);
   var collection = document.getElementsByClassName(activeButton);
   collection.classList.add("pressed");
 
